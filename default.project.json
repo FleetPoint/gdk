@@ -1,0 +1,24 @@
+{
+  "name": "@fleetpoint/gdk",
+  "tree": {
+    "$className": "Configuration",
+    "$ignoreUnknownInstances": true,
+    "$properties": {
+      "Attributes": {
+        "MapId": { "Float64": 0 }
+      }
+    },
+    "types": {
+      "$path": "src/types.luau"
+    },
+    "main": {
+      "$path": "src/main.server.luau",
+      "$properties": {
+        "RunContext": "Server"
+      }
+    },
+    "api": {
+      "$path": "src/api.luau"
+    }
+  }
+}
