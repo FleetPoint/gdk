@@ -45,15 +45,16 @@ end
 game:BindToClose(FleetPoint.endLiveSessions)
 
 const spawnedBusesDirectory = workspace:WaitForChild("SpawnedBuses");
-const speedScalar = (10/12) * (60/88)
+const speedScalar: number = (script.Parent:GetAttribute("InchesPerStud")/12) * (60/88)
+
+const requireControlUnit: boolean = script.Parent:GetAttribute("RequireControlUnit");
 
 while true do
     local spawnedBuses = spawnedBusesDirectory:GetChildren();
 
     spawnedBuses = filter(spawnedBuses, function(bus)
-        return bus:IsA("Model") and bus:FindFirstChild("Body") and bus:FindFirstChild("Body"):FindFirstChild("FleetPointControlUnit");
+        return bus:IsA("Model") and bus:FindFirstChild("Body") and (not requireControlUnit or bus:FindFirstChild("Body"):FindFirstChild("FleetPointControlUnit"));
     end);
-    
 
     const busLocations = map(spawnedBuses, function(bus)
         const driveSeat: VehicleSeat = bus.DriveSeat

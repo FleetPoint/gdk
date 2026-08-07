@@ -5,7 +5,9 @@
     "$ignoreUnknownInstances": true,
     "$properties": {
       "Attributes": {
-        "MapId": { "Float64": 0 }
+        "MapId": { "Float64": 0 },
+        "RequireControlUnit": { "Bool": true },
+        "InchesPerStud": { "Float64": 10.0 }
       }
     },
     "types": {
