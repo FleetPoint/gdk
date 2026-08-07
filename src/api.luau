@@ -39,7 +39,7 @@ function API:sendRequest<T>(endpoint: string, method: "GET" | "POST", body: any?
             Url = `{baseUrl}{endpoint}`;
             Method = method;
             Headers = {
-                Authorization = HttpService:GetSecret("FleetPoint-API-Key"):AddPrefix("Bearer ");
+                Authorization = HttpService:GetSecret("FleetPoint_API_Key"):AddPrefix("Bearer ");
                 ["X-GDK-Version"] = `{GDKVersion}`;
                 ["Content-Type"] = "application/json";
             };
