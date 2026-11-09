@@ -64,7 +64,7 @@ while true do
 
         return {
             busId = bus:GetAttribute("BusId");
-            location = {driveSeat.CFrame.Position.X, driveSeat.CFrame.Position.Y, math.deg(heading), speed};
+            location = {driveSeat.CFrame.Position.X, driveSeat.CFrame.Position.Z, math.deg(heading), speed};
         };
     end);
 
