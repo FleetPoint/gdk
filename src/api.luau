@@ -22,7 +22,7 @@
 const HttpService = game:GetService("HttpService");
 const RunService = game:GetService("RunService");
 
-const GDKVersion: number = script.Parent.PackageLink.VersionNumber;
+const GDKVersion: number = 8;
 const mapId = script.Parent:GetAttribute("MapId");
 
 const Types = require("./types");
