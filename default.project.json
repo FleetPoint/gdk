@@ -6,6 +6,7 @@
     "$properties": {
       "Attributes": {
         "MapId": { "Float64": 0 },
+        "EnableLocationTracking": { "Bool": true },
         "RequireControlUnit": { "Bool": true },
         "InchesPerStud": { "Float64": 10.0 }
       }

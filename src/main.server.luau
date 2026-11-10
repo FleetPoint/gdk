@@ -48,8 +48,9 @@ const spawnedBusesDirectory = workspace:WaitForChild("SpawnedBuses");
 const speedScalar: number = (script.Parent:GetAttribute("InchesPerStud")/12) * (60/88)
 
 const requireControlUnit: boolean = script.Parent:GetAttribute("RequireControlUnit");
+const enableLocationTracking: boolean = script.Parent:GetAttribute("EnableLocationTracking");
 
-while true do
+while enableLocationTracking do
     local spawnedBuses = spawnedBusesDirectory:GetChildren();
 
     spawnedBuses = filter(spawnedBuses, function(bus)
